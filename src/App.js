@@ -15,7 +15,7 @@ componentDidMount() {
 }
 
 getApi() {
-  fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=hu&apikey=52e4b1c55a34b26844f88e80975dd286`)
+  fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=d&apikey=52e4b1c55a34b26844f88e80975dd286`)
   .then(response => {
     return response.json();
   })
@@ -33,14 +33,24 @@ handleSubmit(e) {
 
 printApiData() {
   if(this.state.apiData){
-  return this.state.apiData.map( apiData => ( <h2 key={apiData.id}>{apiData.name}</h2> ))
+  return this.state.apiData.map( apiData => ( 
+  <h2 key={apiData.id}>{apiData.name}</h2> 
+  // <h3 key={apiData.id}>{apiData.description}</h3>
+  ))
   }
 }
 
 render() {
   console.log(this.state.apiData)
-    return ( <div className="app-page">
-      {this.printApiData()}
+    return ( 
+    <div className="app-page">
+    <h1>Marvel Characters</h1>
+    <h2>Enter a Character:</h2>
+      <form onSubmit={this.handleSubmit}>
+        <input placeholder='Your Search' type='text' onChange ={this.handleChange} value={this.state.name}/>
+        <ul>{this.printApiData()}</ul>
+      </form>
+      
     </div>
     );
   }
