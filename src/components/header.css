@@ -1,0 +1,11 @@
+.titleStyle {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    background-color: black;
+    font-size: 27pt;
+    color: white;
+    font-weight: 800;
+    padding: 12px;
+    height: 100px;
+  }
