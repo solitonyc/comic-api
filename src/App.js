@@ -6,16 +6,27 @@ class App extends Component {
     super(props);
       this.state = {
         name: '',
-        apiData: null
+        apiData: []
       }
-  }
   
-componentDidMount() {
-  this.getApi()
-}
+  this.handleChange = this.handleChange.bind(this)
+  this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+ handleChange(e) {
+  const {name, value} = e.target;
+
+  this.setState({
+     [name]: value
+   })
+ } 
+
+// componentDidMount() {
+//   this.getApi()
+// }
 
 getApi() {
-  fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=d&apikey=52e4b1c55a34b26844f88e80975dd286`)
+  fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${this.state.name}&apikey=52e4b1c55a34b26844f88e80975dd286`)
   .then(response => {
     return response.json();
   })
@@ -33,23 +44,21 @@ handleSubmit(e) {
 
 printApiData() {
   if(this.state.apiData){
-  return this.state.apiData.map( apiData => ( 
-  <h2 key={apiData.id}>{apiData.name}</h2> 
-  // <h3 key={apiData.id}>{apiData.description}</h3>
-  ))
+  return this.state.apiData.map( pieceOfData => <div key={pieceOfData.id}> <p className="heroName">{pieceOfData.name}</p> <p className="heroDescrip">{pieceOfData.description}</p> <img className="heroImage" src={`${pieceOfData.thumbnail.path}.${pieceOfData.thumbnail.extension}`} />  </div>)
   }
 }
 
 render() {
-  console.log(this.state.apiData)
+  console.log(this.state)
     return ( 
     <div className="app-page">
-    <h1>Marvel Characters</h1>
+    <h1>Marvel Character Search</h1>
     <h2>Enter a Character:</h2>
       <form onSubmit={this.handleSubmit}>
-        <input placeholder='Your Search' type='text' onChange ={this.handleChange} value={this.state.name}/>
-        <ul>{this.printApiData()}</ul>
+        <input id="inputStyle" type='text' value={this.state.name} name='name' onChange={this.handleChange}/>
+        <input id="submitButton" type='submit' placeholder='Text Search'/>
       </form>
+        {this.printApiData()}
       
     </div>
     );
