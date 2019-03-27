@@ -4,4 +4,35 @@
   background-color: rgb(126, 73, 117);
   margin: 0px;
   padding: 24px;
+  color: black;
 }
+
+.heroName {
+  font-size: 40px;
+  font-family: 'Anton', sans-serif;
+  margin: 24px 15px 0px;
+}
+
+.heroImage {
+  width: 400px;
+  padding: 5px;
+}
+
+.heroDescrip {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px 15px 24px;
+  text-justify: auto;
+}
+
+#inputStyle {
+  margin: 8px;
+  height: 18px;
+  font-size: 20px;
+}
+
+#submitButton {
+  margin: 8px;
+  height: 18px;
+}
+
