@@ -24,11 +24,11 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   height: 100%;
-  
 }
 
 .child {
   width: 40%;
+  flex: 0;
 }
 
 .heroName {
@@ -63,7 +63,6 @@ body {
 
 .inputButton {
   margin: 8px;
-  height: 20px;
-  padding: 0px;
+  padding: 4px;
 }
 
