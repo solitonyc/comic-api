@@ -5,7 +5,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div>
-        <footer className="footerStyle">Project By:  Solito Reyes; API by Marvel Compics</footer>         
+        <footer className="footerStyle">Project By:  Solito Reyes; API by Marvel Comics</footer>         
       </div>
     )
   }

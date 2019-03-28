@@ -1,3 +1,8 @@
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .headerStyle {
     font-family: 'Anton', sans-serif;
     text-align: center;
@@ -6,6 +11,7 @@
     color: white;
     font-weight: 800;
     padding: 12px;
+    background-image: url('/brick-background.svg')
   }
 
 /*TAKEN FROM HEROLIST.CSS*/
@@ -14,12 +20,12 @@
     margin: 0 auto;
 }
 
-.parent {
+/* .parent {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   height: 100%;
-}
+} */
 
 .child {
   width: 40%;

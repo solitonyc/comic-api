@@ -4,9 +4,10 @@ body {
 
 .searchBox {
     background-color: rgb(126, 73, 117);
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 300px 300px 300px 300px;
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 300px 300px 300px 300px; */
     justify-content: space-around;
 }
 
@@ -15,7 +16,7 @@ body {
 }
 
 .listOutput {
-    padding: 8px;
+    padding: 12px 18px;
     margin: 0 auto;
 }
 
@@ -43,7 +44,7 @@ body {
 .heroImage {
   width: 220px;
   height: 200px;
-  margin: 4px;
+  margin: 8px;
   border-radius: 25px;
   border: 12px solid black;
 }
