@@ -40,7 +40,7 @@ handleChange(e) {
       
     
         <form className="searchForm" onSubmit={(e) => this.handleSubmit(e)}>
-          <h3>Enter a Character String:</h3>
+          <p>Enter One or Two Characters:</p>
           <input className="inputFieldBox" type='text' value={this.state.name} name='name' onChange={(e) => this.handleChange(e)}/>
           <input className="inputButton" type='submit' placeholder='Text Search'/>
         </form>
