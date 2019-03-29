@@ -14,21 +14,18 @@ This React App uses fetch to pull information from the Marvel Comics API and ren
     * Click on the search button provided next to the box.
 4. You will now see a display of characters that match the strings you've entered in the search.
 
-
-
 # Screenshots:
 ## Wire Frame
-![Initial Wire Frame](images/screen-shot-firstwireframe.png)
-
+![Initial Wire Frame](src/images/screen-shot-firstwireframe.png)
 
 ## Welcome
-![Welcome Page Screen Shot](images/screen-shot-welcome.png)
+![Welcome Page Screen Shot](src/images/screen-shot-welcome.png)
 
 ## Search Characters
-![Search Characters Screen Shot](images/screen-shot-searchcharacters.png)
+![Search Characters Screen Shot](src/images/screen-shot-searchcharacters.png)
 
 ## About
-![About Page Screen Shot](images/screen-shot-about.png)
+![About Page Screen Shot](src/images/screen-shot-about.png)
 
 # Code Snippet:
 The below sets my initial state for the search box, provides a capture array for the fetch data, fetches the data from the API, sets controls for the search controls, and selects the fields I need from the API.
