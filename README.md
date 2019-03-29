@@ -6,7 +6,7 @@ Welcome to my first React App. I wrote this in HTML, CSS Flex, Javascript using 
 This React App uses fetch to pull information from the Marvel Comics API and renders that information to an output page. Marvel provides fun and colorful imagery for developers to utilize.
 
 ## How This Works
-1. Go to this URL: https://github.com/solitonyc/comic-api
+1. Go to this URL: https://ancient-shelf-14355.herokuapp.com
 2. You'll arrive at the welcome screen 
     * In the navigation bar, click on Search Characters  
 3. In the Search Characters page, you will see a search box and submit button.
