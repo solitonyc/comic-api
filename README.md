@@ -22,7 +22,7 @@ This React App uses fetch to pull information from the Marvel Comics API and ren
 
 
 ## Welcome
-![Welcome Page Screen Shot](images/screen-shot-welcome.png)
+![Welcome Page Screen Shot](/images/screen-shot-welcome.png)
 
 ## Search Characters
 ![Search Characters Screen Shot](images/screen-shot-searchcharacters.png)
