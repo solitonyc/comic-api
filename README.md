@@ -14,12 +14,9 @@ This React App uses fetch to pull information from the Marvel Comics API and ren
     * Click on the search button provided next to the box.
 4. You will now see a display of characters that match the strings you've entered in the search.
 
-
-
 # Screenshots:
 ## Wire Frame
 ![Initial Wire Frame](src/images/screen-shot-firstwireframe.png)
-
 
 ## Welcome
 ![Welcome Page Screen Shot](src/images/screen-shot-welcome.png)
@@ -38,8 +35,6 @@ import React, { Component } from 'react';
 import Nav from './Nav';
 import HeroList from './HeroList';
 import './header.css';
-
-
 
 
 export default class Header extends Component {
