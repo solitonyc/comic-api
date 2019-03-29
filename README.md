@@ -1,68 +1,100 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marvel Comics Character Search App
+## React API App
+Welcome to my first React App. I wrote this in HTML, CSS Flex, Javascript using React.js framework. I hope you enjoy it. 
 
-## Available Scripts
+## Description
+This React App uses fetch to pull information from the Marvel Comics API and renders that information to an output page. Marvel provides fun and colorful imagery for developers to utilize.
 
-In the project directory, you can run:
+## How This Works
+1. Go to this URL: https://github.com/solitonyc/comic-api
+2. You'll arrive at the welcome screen 
+    * In the navigation bar, click on Search Characters  
+3. In the Search Characters page, you will see a search box and submit button.
+    * Enter one or two letters of the alphabet into the search box.
+    * Click on the search button provided next to the box.
+4. You will now see a display of characters that match the strings you've entered in the search.
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+# Screenshots:
+## Wire Frame
+![Initial Wire Frame](images/screen-shot-firstwireframe.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Welcome
+![Welcome Page Screen Shot](images/screen-shot-welcome.png)
 
-### `npm run build`
+## Search Characters
+![Search Characters Screen Shot](images/screen-shot-searchcharacters.png)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## About
+![About Page Screen Shot](images/screen-shot-about.png)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+# Code Snippet:
+The below sets my initial state for the search box, provides a capture array for the fetch data, fetches the data from the API, sets controls for the search controls, and selects the fields I need from the API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+import React, { Component } from 'react';
+import Nav from './Nav';
+import HeroList from './HeroList';
+import './header.css';
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+export default class Header extends Component {
+  state = {
+    name: 'h',
+    apiData: []
+  }
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+handleSubmit(e) {
+  e.preventDefault()
+  this.getApi()
+}
 
-## Learn More
+handleChange(e) {
+  const {name, value} = e.target;
+  this.setState({
+     [name]: value
+   })
+ }
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ getApi() {
+  fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${this.state.name}&apikey=52e4b1c55a34b26844f88e80975dd286`)
+  .then(response => {
+    return response.json();
+  })
+  .then((json) => {
+    this.setState({
+      apiData: json.data.results
+    })
+  })
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  render() {
+    return (
+      <div>
+        <header className="headerStyle">
+        <h1>Solito's Marvel Superhero Search</h1>   
+        <form className="searchForm" onSubmit={(e) => this.handleSubmit(e)}>
+          <p className="inputInstructs">Enter One or Two Characters:</p>
+          <input className="inputFieldBox" type='text' placeholder='ex: "h..."' value={this.state.name} name='name' onChange={(e) => this.handleChange(e)}/>
+          <button className="inputButton" type='submit'>Search</button>
+        </form>
+      </header>
+        <HeroList heroes = {this.state.apiData} />
+      </div>
+    )
+  }
+}
 
-### Code Splitting
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
+# User Story
+A user who wanted to see a realm of Marvel characters, can do so by using this App. Most people are familiar with the most popular characters, like The Hulk or Wolverine, but they may not be familiar with characters like Danny Rand or Genesis. This is a great tool for discovering those other obscure characters in Marvel Universe. However, not all characters are provided. For example, One About All does not appear in this API.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
