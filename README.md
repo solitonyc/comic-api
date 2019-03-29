@@ -37,8 +37,6 @@ import HeroList from './HeroList';
 import './header.css';
 
 
-
-
 export default class Header extends Component {
   state = {
     name: 'h',
