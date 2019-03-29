@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import Nav from './Nav';
 import HeroList from './HeroList';
 import './header.css';
+
+
+
 
 export default class Header extends Component {
   state = {
@@ -36,13 +40,11 @@ handleChange(e) {
     return (
       <div>
         <header className="headerStyle">
-        <h1>Solito's Marvel Superhero Search</h1>
-      
-    
+        <h1>Solito's Marvel Superhero Search</h1>   
         <form className="searchForm" onSubmit={(e) => this.handleSubmit(e)}>
-          <p>Enter One or Two Characters:</p>
-          <input className="inputFieldBox" type='text' value={this.state.name} name='name' onChange={(e) => this.handleChange(e)}/>
-          <input className="inputButton" type='submit' placeholder='Text Search'/>
+          <p className="inputInstructs">Enter One or Two Characters:</p>
+          <input className="inputFieldBox" type='text' placeholder='h...' value={this.state.name} name='name' onChange={(e) => this.handleChange(e)}/>
+          <button className="inputButton" type='submit'>Search</button>
         </form>
       </header>
         <HeroList heroes = {this.state.apiData} />

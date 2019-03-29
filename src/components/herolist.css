@@ -1,35 +1,17 @@
-body {
-    background-image: url('brick-background.svg')
-}
-
 .searchBox {
+    height: 100%;
     background-color: rgb(126, 73, 117);
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     flex-wrap: wrap;
-    /* grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: 300px 300px 300px 300px; */
     justify-content: space-around;
-}
-
-.searchInput {
-    margin: 0 auto;
+    
 }
 
 .listOutput {
     padding: 12px 18px;
     margin: 0 auto;
-}
-
-.parent {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  height: 100%;
-}
-
-.child {
-  width: 40%;
-  flex: 0;
 }
 
 .heroName {
@@ -46,7 +28,7 @@ body {
   height: 200px;
   margin: 8px;
   border-radius: 25px;
-  border: 12px solid black;
+  border: 12px solid rgb(24, 19, 23);
 }
 
 .heroDescrip {
@@ -56,14 +38,5 @@ body {
   text-justify: auto;
 }
 
-.inputFieldBox {
-  margin: 0 8px;
-  height: 20px;
-  font-size: 18px;
-}
 
-.inputButton {
-  margin: 8px;
-  padding: 4px;
-}
 
