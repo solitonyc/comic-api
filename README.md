@@ -18,7 +18,7 @@ This React App uses fetch to pull information from the Marvel Comics API and ren
 
 # Screenshots:
 ## Wire Frame
-![Initial Wire Frame](images/screen-shot-firstwireframe.png)
+![Initial Wire Frame](../images/screen-shot-firstwireframe.png)
 
 
 ## Welcome
