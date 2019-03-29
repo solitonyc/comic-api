@@ -1,14 +1,14 @@
-.footerStyle {
-    text-align: center;
-    background-color: rgb(126, 73, 117);
+body {
+    margin: 24px;    
+}
+.navStyle {
+    background-color: rgb(24, 19, 23);
     color: white;
-    font-weight: 100;
-    padding: 8px;
-  }
+}
 
-  /* a {
-    color: black;
-  } */
+a {
+    color: white;
+  }
 
   a:link {
     text-decoration: black;

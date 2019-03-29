@@ -1,13 +1,14 @@
 h1, h2, h3 {
     margin-top: 0;
     margin-bottom: 0;
+    letter-spacing: .5px;
 }
 
 .headerStyle {
     font-family: 'Anton', sans-serif;
     text-align: center;
     text-decoration: none;
-    background-color: black;
+    background-color: rgb(24, 19, 23);
     color: white;
     font-weight: 800;
     padding: 12px;
@@ -20,50 +21,25 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
-/* .parent {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  height: 100%;
-} */
-
-.child {
-  width: 40%;
-  flex: 0;
-}
-
-.heroName {
-  font-size: 20px;
-  font-family: 'Anton', sans-serif;
-  margin: 4px;
-  color: black;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.heroImage {
-  width: 220px;
-  height: 200px;
-  margin: 4px;
-  border-radius: 25px;
-  border: 12px solid black;
-}
-
-.heroDescrip {
-  width: 200px;
-  margin: 0 auto;
-  padding: 4px;
-  text-justify: auto;
+.inputInstructs {
+    font-family: 'Helvetica', 'Arial';
 }
 
 .inputFieldBox {
   margin: 0 8px;
+  padding: 4px;
   height: 20px;
   font-size: 18px;
+  width: 88px;
 }
 
 .inputButton {
-  margin: 8px;
+  height: 28px;
+  width: 66px;
+  margin: 0 8px;
   padding: 4px;
+  border-radius: 8px;
+  border: 3px white solid;
+  background-color: rgb(42, 207, 84);
 }
 
