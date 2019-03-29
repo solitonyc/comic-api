@@ -4,6 +4,7 @@ body {
 .navStyle {
     background-color: rgb(24, 19, 23);
     color: white;
+    padding: 16px 26px;
 }
 
 a {

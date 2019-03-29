@@ -12,10 +12,8 @@ h1, h2, h3 {
     color: white;
     font-weight: 800;
     padding: 12px;
-    background-image: url('/brick-background.svg')
   }
 
-/*TAKEN FROM HEROLIST.CSS*/
 .listOutput {
     padding: 8px;
     margin: 0 auto;
@@ -26,20 +24,21 @@ h1, h2, h3 {
 }
 
 .inputFieldBox {
+  height: 18px;
+  width: 88px;
   margin: 0 8px;
   padding: 4px;
-  height: 20px;
   font-size: 18px;
-  width: 88px;
-}
+  }
 
 .inputButton {
   height: 28px;
   width: 66px;
   margin: 0 8px;
-  padding: 4px;
+  padding: 6px 4px;
   border-radius: 8px;
-  border: 3px white solid;
-  background-color: rgb(42, 207, 84);
+  border: 2px white solid;
+  background-color: rgb(27, 97, 44);
+  color: white;
 }
 

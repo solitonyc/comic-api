@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './herolist.css';
-import bgImage from '../images/mvector-image.png';
+import bgImage from '../images/bg-mcsheros.png';
 
 
 export default class HeroList extends Component {

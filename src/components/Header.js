@@ -8,7 +8,7 @@ import './header.css';
 
 export default class Header extends Component {
   state = {
-    name: '',
+    name: 'h',
     apiData: []
   }
 
@@ -43,7 +43,7 @@ handleChange(e) {
         <h1>Solito's Marvel Superhero Search</h1>   
         <form className="searchForm" onSubmit={(e) => this.handleSubmit(e)}>
           <p className="inputInstructs">Enter One or Two Characters:</p>
-          <input className="inputFieldBox" type='text' placeholder='h...' value={this.state.name} name='name' onChange={(e) => this.handleChange(e)}/>
+          <input className="inputFieldBox" type='text' placeholder='ex: "h..."' value={this.state.name} name='name' onChange={(e) => this.handleChange(e)}/>
           <button className="inputButton" type='submit'>Search</button>
         </form>
       </header>
