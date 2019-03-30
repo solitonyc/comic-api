@@ -86,17 +86,17 @@ handleChange(e) {
 }
 
 ```
-## Irrelevent Public Key
+## Irrelevent Private Key
 When you request a key, you will receive two: 
-1. Privae key
-2. Public key
+1. Public key
+2. Private key
 
-Just ignore this public key altogether when making a fetch call. It's completely extraneous unless you are building a server-side application.
+Just ignore this Private key altogether when making a fetch call in your app. It's completely extraneous unless you are building a server-side application.
 
-![Public Key](src/images/screen-shot-publickey.png)
+![Private Key](src/images/screen-shot-publickey.png)
 
 ## Add Domain in Referrer
-Enter the app's domain name into the referrer security form in your Marvel Developer account. Failing to enter a correct domain, will give you a 401 error, and some programming errors about your fetch code, which will lead you on a wild goose chase. For development, add 'localhost' without the quotes. After deployment, add the URL. See image below.
+Enter the app's domain name into the referrer security form in your Marvel Developer account. Failing to enter a correct domain, will give you a 401 error. You may also see programming errors about your fetch code potentially leading you into a wild goose chase. For your react app enter 'localhost' without the quotes. After deployment, add the URL, such your Heroku or AWS etc. See image below.
 
 ![Referrer](src/images/screen-shot-referrer.png)
 
