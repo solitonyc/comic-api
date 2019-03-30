@@ -18,10 +18,19 @@
   font-size: 20px;
   font-family: 'Anton', sans-serif;
   margin: 4px;
-  color: black;
+  /* color: black; */
   text-transform: uppercase;
   text-align: center;
-}
+  -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+        3px 3px 0 #000000,
+      -1px -1px 0 #000000,  
+       1px -1px 0 #000000,
+       -1px 1px 0 #000000,
+        1px 1px 0 #000000;
+ }
+
 
 .heroImage {
   width: 220px;
