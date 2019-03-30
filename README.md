@@ -57,7 +57,7 @@ handleChange(e) {
  }
 
  getApi() {
-  fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${this.state.name}&apikey=52e4b1c55a34b26844f88e80975dd286`)
+  fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${this.state.name}&apikey=********************`)
   .then(response => {
     return response.json();
   })
