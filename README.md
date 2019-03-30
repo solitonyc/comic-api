@@ -27,7 +27,8 @@ This React App uses fetch to pull information from the Marvel Comics API and ren
 ## About
 ![About Page Screen Shot](src/images/screen-shot-about.png)
 
-# Code Snippet:
+# Programming
+## Code Snippet Sample:
 The below sets my initial state for the search box, provides a capture array for the fetch data, fetches the data from the API, sets controls for the search controls, and selects the fields I need from the API.
 
 ```
@@ -85,7 +86,19 @@ handleChange(e) {
 }
 
 ```
+## Irrelevent Public Key
+When you request a key, you will receive two: 
+1. Privae key
+2. Public key
 
+Just ignore this public key altogether when making a fetch call. It's completely extraneous unless you are building a server-side application.
+
+![Public Key](src/images/screen-shot-publickey.png)
+
+## Add Domain in Referrer
+Enter the app's domain name into the referrer security form in your Marvel Developer account. Failing to enter a correct domain, will give you a 401 error, and some programming errors about your fetch code, which will lead you on a wild goose chase. For development, add 'localhost' without the quotes. After deployment, add the URL. See image below.
+
+![Referrer](src/images/screen-shot-referrer.png)
 
 # User Story
 A user who wanted to see a realm of Marvel characters, can do so by using this App. Most people are familiar with the most popular characters, like The Hulk or Wolverine, but they may not be familiar with characters like Danny Rand or Genesis. This is a great tool for discovering those other obscure characters in Marvel Universe. However, not all characters are provided. For example, One About All does not appear in this API.

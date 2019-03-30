@@ -42,7 +42,7 @@ handleChange(e) {
         <header className="headerStyle">
         <h1>Solito's Marvel Superhero Search</h1>   
         <form className="searchForm" onSubmit={(e) => this.handleSubmit(e)}>
-          <p className="inputInstructs">Enter One or Two Characters:</p>
+          <p className="inputInstructs">Enter One or Two Letters (ex: h or hu):</p>
           <input className="inputFieldBox" type='text' placeholder='ex: "h..."' value={this.state.name} name='name' onChange={(e) => this.handleChange(e)}/>
           <button className="inputButton" type='submit'>Search</button>
         </form>
