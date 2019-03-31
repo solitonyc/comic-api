@@ -1,6 +1,6 @@
 # Marvel Comics Character Search App
 ## React API App
-Welcome to my first React App. I wrote this in HTML, CSS Flex, Javascript using React.js framework. I hope you enjoy it. 
+Welcome to my first React App. I wrote this in HTML, CSS Flex, and Javascript using React.js framework. I really enjoyed working on this project.  
 
 ## Description
 This React App uses fetch to pull information from the Marvel Comics API and renders that information to an output page. Marvel provides fun and colorful imagery for developers to utilize.
@@ -29,7 +29,7 @@ This React App uses fetch to pull information from the Marvel Comics API and ren
 
 # Programming
 ## Code Snippet Sample:
-The below sets my initial state for the search box, provides a capture array for the fetch data, fetches the data from the API, sets controls for the search controls, and selects the fields I need from the API.
+The React component code below sets the initial state for the search's input box, provides a capture array for the API data, fetches the data from the API, sets controls for the submitting the input values, and selects the defined fields from the API to be rendered.
 
 ```
 import React, { Component } from 'react';
@@ -96,7 +96,7 @@ Just ignore this Private key altogether when making a fetch call in your app. It
 ![Private Key](src/images/screen-shot-publickey.png)
 
 ## Add Domain in Referrer
-Enter the app's domain name into the referrer security form in your Marvel Developer account. Failing to enter a correct domain, will give you a 401 error. You may also see programming errors about your fetch code potentially leading you into a wild goose chase. For your react app enter 'localhost' without the quotes. After deployment, add the URL, such your Heroku or AWS etc. See image below.
+Enter the app's domain name into the referrer security form in your Marvel Developer account. Failing to enter a correct domain, will give you a 401 error when trying to fetch data. You may also see misleading programming errors in console log about your fetch code potentially leading you into a wild goose chase. For your React app add 'localhost' without the quotes. After deployment, add the URL provided by your host provider, such your 'Herokuapp.com'. See image below.
 
 ![Referrer](src/images/screen-shot-referrer.png)
 
